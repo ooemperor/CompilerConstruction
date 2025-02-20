@@ -28,7 +28,7 @@ public class NodeNumber extends Node {
         this.number = number;
     }
 
-    public void acceptVisitor(IVisitor v){
-        v.visitNumber(this);
+    public int acceptVisitor(IVisitor v){
+        return v.visitNumber(this);
     }
 }

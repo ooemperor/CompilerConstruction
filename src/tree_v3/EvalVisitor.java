@@ -6,10 +6,10 @@ public class EvalVisitor implements IVisitor{
     }
 
     public int visitAddition(NodeAddition node){
-        return 0;
+        return (node.getLeftChild().acceptVisitor(this) + node.getRightChild().acceptVisitor(this));
     }
 
     public int visitMultiplication(NodeMultiplication node){
-        return 0;
+        return node.getLeftChild().acceptVisitor(this) * node.getRightChild().acceptVisitor(this);
     }
 }

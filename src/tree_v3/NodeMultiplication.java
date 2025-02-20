@@ -15,7 +15,8 @@ public class NodeMultiplication extends Node {
         super(leftNodeOld, rightNodeOld, Operation.mult);
     }
 
-    public void acceptVisitor(EvalVisitor v) {
-        v.visitMultiplication(this);
+    @Override
+    public int acceptVisitor(IVisitor v) {
+        return v.visitMultiplication(this);
     }
 }

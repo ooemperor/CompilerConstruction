@@ -15,7 +15,8 @@ public class NodeAddition extends Node {
         super(leftNodeOld, rightNodeOld, Operation.addition);
     }
 
-    public void acceptVisitor(EvalVisitor v) {
-        v.visitAddition(this);
+    @Override
+    public int acceptVisitor(IVisitor v) {
+        return v.visitAddition(this);
     }
 }

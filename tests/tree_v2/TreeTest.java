@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TreeTest {
 
     @Test
-    public void TreeTest1() throws Exception{
+    public void TreeTestCombi() throws Exception{
         Node node2 = new NodeNumber(2);
         Node node10 = new NodeNumber(10);
         Node node5 = new NodeNumber(5);
@@ -29,5 +29,29 @@ public class TreeTest {
         assertTrue(Class.forName("tree_v2.NodeMultiplication").isInstance(nodeMult1));
         assertTrue(Class.forName("tree_v2.Node").isInstance(nodeMult1));
 
+    }
+
+    @Test
+    public void TreeTestAdditionOnly() throws Exception{
+
+        Node node5 = new NodeNumber(5);
+
+        Node nodeAdd = new NodeAddition(node5, node5);
+
+        assertEquals(10, nodeAdd.evaluate());
+        assertTrue(Class.forName("tree_v2.NodeAddition").isInstance(nodeAdd));
+        assertTrue(Class.forName("tree_v2.NodeNumber").isInstance(node5));
+    }
+
+    @Test
+    public void TreeTestMultiplicationOnly() throws Exception{
+
+        Node node5 = new NodeNumber(5);
+
+        Node nodeMulti = new NodeMultiplication(node5, node5);
+
+        assertEquals(25, nodeMulti.evaluate());
+        assertTrue(Class.forName("tree_v2.NodeMultiplication").isInstance(nodeMulti));
+        assertTrue(Class.forName("tree_v2.NodeNumber").isInstance(node5));
     }
 }

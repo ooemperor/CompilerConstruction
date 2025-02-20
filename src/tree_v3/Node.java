@@ -41,9 +41,7 @@ public abstract class Node implements INode {
         }
     }
 
-    public void acceptVisitor(IVisitor v){
-
-    }
+    public abstract int acceptVisitor(IVisitor v);
 
     /*
     Getters and setters
