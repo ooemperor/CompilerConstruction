@@ -1,0 +1,27 @@
+var b = true ; // A boolean
+var i = 123; // A number
+var d = 12.3; // Another number
+var s = "123 "; // This is a string , not a number
+
+i + d; // 135.3
+1 == 2; // false
+!true; // false
+true or false; // true
+var average = (min + max ) / 2;
+
+{
+	print "Hello , world !";
+	print "Hello , SPL Prime world !";
+}
+
+if ( i == s ) {
+	print "yes";
+} else {
+	print "no";
+}
+
+var a = 1;
+while (a < 10) {
+	print a;
+	a = a + 1;
+}
