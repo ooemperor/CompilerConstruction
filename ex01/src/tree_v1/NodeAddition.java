@@ -6,7 +6,7 @@
  */
 package tree_v1;
 
-public abstract class NodeAddition{
+public abstract class NodeAddition extends Node {
     Node leftChild;
     Node rightChild;
 
@@ -16,8 +16,7 @@ public abstract class NodeAddition{
      * @param nodeOldRight the right child of the node
      */
     public NodeAddition(Node nodeOldLeft, Node nodeOldRight){
-        this.leftChild = nodeOldLeft;
-        this.rightChild = nodeOldRight;
+        super(nodeOldLeft, nodeOldRight, Operation.addition);
     }
 
     /*

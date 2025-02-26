@@ -6,7 +6,7 @@
  */
 package tree_v1;
 
-public abstract class NodeNumber {
+public abstract class NodeNumber extends Node {
     private final int number;
 
     /**
@@ -14,6 +14,7 @@ public abstract class NodeNumber {
      * @param number the value of the Node
      */
     public NodeNumber(int number){
+        super(null, null, Operation.number);
         this.number = number;
     }
 

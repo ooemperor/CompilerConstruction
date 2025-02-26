@@ -6,7 +6,7 @@
  */
 package tree_v1;
 
-public abstract class NodeMultiplication {
+public abstract class NodeMultiplication extends Node {
     Node leftChild;
     Node rightChild;
 
@@ -16,8 +16,7 @@ public abstract class NodeMultiplication {
      * @param nodeOldRight the right child of the node
      */
     public NodeMultiplication(Node nodeOldLeft, Node nodeOldRight){
-        this.leftChild = nodeOldLeft;
-        this.rightChild = nodeOldRight;
+        super(nodeOldLeft, nodeOldRight, Operation.mult);
     }
 
     /*
